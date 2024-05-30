@@ -31,9 +31,8 @@ async def start(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
-    m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
+    await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
     await asyncio.sleep(1)
-    await m.delete()
     await update.reply_photo(
         photo=Translation.PIC,
         caption=Translation.START_TEXT.format(update.from_user.mention),
