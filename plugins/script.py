@@ -70,7 +70,7 @@ Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
 ⏳ Tɪᴍᴇ ʟᴇғᴛ : {4}\n\n
 """
 
-    PIC = "https://telegra.ph/file/6170a6d1b03a8999a57d4.jpg"
+    PIC = "https://telegra.ph/file/13138bb072d6ae54386d4.jpg"
 
     PAYMENT_QR = "https://telegra.ph/file/4acfd5a112e10ba0bf34f.jpg"
     
