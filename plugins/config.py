@@ -21,7 +21,7 @@ class Config(object):
 
     HTTP_PROXY = os.environ.get("HTTP_PROXY", "")
 
-    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://UploadLinkToFileBot:UploadLinkToFileBot@cluster0.1gybihh.mongodb.net/?retryWrites=true&w=majority")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://nikzgod:nikzgod@cluster0.lqn4wau.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     
     SESSION_NAME = os.environ.get("SESSION_NAME", "LuffySale_Bot")
     
