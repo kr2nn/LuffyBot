@@ -11,11 +11,11 @@ logging.basicConfig(
 
 class Config(object):
     
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6526539974:AAEN2s80bUgYi-0fRG72E9_M2L4otEBHuvA")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7477234408:AAFR6gq_TU6dM9KSAd5UnCshP3m1-cPjDMo")
     
-    API_ID = int(os.environ.get("API_ID", "4888076"))
+    API_ID = int(os.environ.get("API_ID", "29478734"))
     
-    API_HASH = os.environ.get("API_HASH", "8b9b8214d84305d5ba8042c93575ea84")
+    API_HASH = os.environ.get("API_HASH", "8bd53e36eceada3329fbe46d9b961d1f")
 
     DOWNLOAD_LOCATION = "./DOWNLOADS"
 
@@ -25,11 +25,11 @@ class Config(object):
     
     SESSION_NAME = os.environ.get("SESSION_NAME", "LuffySale_Bot")
     
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002070853757"))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002142928842"))
     
     LOGGER = logging
 
-    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002070853757")
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002072970024")
 
     OWNER_ID = int(os.environ.get("OWNER_ID", "6807518752"))
     
