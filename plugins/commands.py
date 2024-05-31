@@ -31,7 +31,7 @@ async def start(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
-    mkn = await m.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
+    mkn = await update.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
     await mkn.delete()
        else:
     await update.reply_photo(
