@@ -32,6 +32,7 @@ async def start(bot, update):
       if fsub == 400:
         return
     mkn = await update.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
+    await asyncio.sleep(2)
     await mkn.delete()
     await update.reply_photo(
         photo=Translation.PIC,
