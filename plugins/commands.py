@@ -15,7 +15,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from plugins.database.add import add_user_to_database
 from plugins.functions.forcesub import handle_force_subscribe
 
-PIC = "https://telegra.ph/file/72b1efaa44944d2b9e1b9.jpg"
 
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
@@ -24,13 +23,16 @@ async def start(bot, update):
     await add_user_to_database(bot, update)
     await bot.send_message(
         Config.LOG_CHANNEL,
-           f"#NEW_USER: \n\nNew User [{update.from_user.first_name}](tg://user?id={update.from_user.id}) started @{Config.BOT_USERNAME}!!"
+           f"#NEW_USER: \n\n**New User** [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n **Started** @{Config.BOT_USERNAME}!!"
     )
     
     if Config.UPDATES_CHANNEL:
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
+    mkn = await m.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
+    await mkn.delete()
+        else:
     await update.reply_photo(
         photo=Translation.PIC,
         caption=Translation.START_TEXT.format(update.from_user.mention),
