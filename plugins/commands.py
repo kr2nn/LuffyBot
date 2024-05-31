@@ -19,7 +19,6 @@ PIC = "https://telegra.ph/file/72b1efaa44944d2b9e1b9.jpg"
 
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
-    await update.react(emoji="🔥")
     if not update.from_user:
         return await update.reply_text("I don't know about you sar :(")
     await add_user_to_database(bot, update)
@@ -32,6 +31,7 @@ async def start(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
+    await update.react(emoji="🔥")       
     mkn = await update.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
     await asyncio.sleep(2)
     await mkn.delete()
