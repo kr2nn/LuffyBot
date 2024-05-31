@@ -26,9 +26,9 @@ async def button(bot, update):
             disable_web_page_preview=True
         )
     elif update.data == "payment":
-      await update.message.edit_media(
-        media=Translation.PAYMENT_QR,
-       # caption=Translation.QR_TEXT,
+      await update.message.edit_photo(
+        photo=Translation.PAYMENT_QR,
+        caption=Translation.QR_TEXT,
         reply_markup=Translation.BUTTONS
         ) 
     elif "close" in update.data:
