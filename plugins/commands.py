@@ -32,7 +32,7 @@ async def start(bot, update):
       if fsub == 400:
         return
     await update.react(emoji="🔥")       
-    mkn = await update.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
+    mkn = await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ")  
     await asyncio.sleep(2)
     await mkn.delete()
     await update.reply_photo(
