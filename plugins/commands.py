@@ -33,7 +33,6 @@ async def start(bot, update):
         return
     mkn = await update.reply("**Pʟᴇᴀꜱᴇ Wᴀɪᴛ....**") 
     await mkn.delete()
-       else:
     await update.reply_photo(
         photo=Translation.PIC,
         caption=Translation.START_TEXT.format(update.from_user.mention),
