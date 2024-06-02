@@ -32,6 +32,10 @@ async def videosdemo(bot, update):
       if fsub == 400:
         return
     await update.reply_video(
-        video=["https://telegra.ph/file/ad54fa01434e211d79125.mp4", "https://telegra.ph/file/915721b8d204fab00c270.mp4"],
-        caption=Translation.START_TEXT.format(update.from_user.mention)
+        video="https://telegra.ph/file/ad54fa01434e211d79125.mp4",
+        caption="[Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)"
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/915721b8d204fab00c270.mp4",
+        caption="[Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)"
     )
