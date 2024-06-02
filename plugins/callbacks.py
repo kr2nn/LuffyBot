@@ -26,8 +26,6 @@ async def button(bot, update):
             disable_web_page_preview=True
         )
     elif update.data == "payment":
-       await update.message.delete()
-    # Edit the message to replace the current media with the new photo
        await bot.edit_message_media(
            chat_id=update.message.chat.id,
            message_id=update.message.message_id,
