@@ -64,7 +64,7 @@ Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
     """
 
     ADS_TEXT = """
-    [Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)
+    **[Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)**
     """
 
     PROGRESS = """
