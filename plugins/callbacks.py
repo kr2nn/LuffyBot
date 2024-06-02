@@ -32,5 +32,6 @@ async def button(bot, update):
             reply_markup=Translation.BUTTONS
       #  disable_web_page_preview=True
         )
+      await update.message.edit_caption(Translation.QR_TEXT)
     elif "close" in update.data:
         await update.message.delete(True)
