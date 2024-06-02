@@ -31,5 +31,5 @@ async def videosdemo(bot, update):
       if fsub == 400:
         return
     await update.reply_video(
-        video=["https://telegra.ph/file/ad54fa01434e211d79125.mp4, https://telegra.ph/file/915721b8d204fab00c270.mp4"]
+        video=["https://telegra.ph/file/ad54fa01434e211d79125.mp4", "https://telegra.ph/file/915721b8d204fab00c270.mp4"]
     )
