@@ -12,5 +12,5 @@ async def refer(client,message):
     await message.reply_photo(
       photo=Translation.PIC,
       caption=Translation.INVITE_TEXT, 
-      reply_markup=Translation.BUTTONS
+      reply_markup=Translation.INVITE_BUTTONS
     )
