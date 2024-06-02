@@ -26,6 +26,7 @@ async def button(bot, update):
             disable_web_page_preview=True
         )
     elif update.data == "payment":
+      await update.message.delete()
       await update.reply_photo(
         photo=Translation.PAYMENT_QR,
         caption=Translation.QR_TEXT,
