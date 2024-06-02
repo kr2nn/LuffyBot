@@ -31,6 +31,9 @@ async def videosdemo(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
+    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbh2ZctsRwEUN7dqpJGbb2wFfsEuKGAAJ8AAOtZbwUeF2RGKVKMMU1BA")  
+    await asyncio.sleep(4)
+    await mkn.delete()
     await update.reply_video(
         video="https://telegra.ph/file/ad54fa01434e211d79125.mp4",
         caption=Translation.ADS_TEXT
