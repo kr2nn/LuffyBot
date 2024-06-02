@@ -27,11 +27,12 @@ async def button(bot, update):
         )
     elif update.data == "payment":
        await update.message.delete()
+    # Send the photo
        await bot.send_photo(
            chat_id=update.message.chat.id,
-           photo=Translation.PAYMENT_QR,
-           caption=Translation.QR_TEXT,
-           reply_markup=Translation.BUTTONS
+           photo=Translation.PAYMENT_QR,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
+           caption=Translation.QR_TEXT,  # Caption for the photo
+           reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
        )
     elif "close" in update.data:
         await update.message.delete(True)
