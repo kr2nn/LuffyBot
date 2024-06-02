@@ -24,7 +24,7 @@ async def start(bot, update):
     await add_user_to_database(bot, update)
     await bot.send_message(
         Config.LOG_CHANNEL,
-           f"**#NEW_USER:** \n\n**New User** [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n **Started** @{Config.BOT_USERNAME}!!"
+           f"#NEW_USER: \n\n**New User** [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n **Started** @{Config.BOT_USERNAME}!!\n**○ ID :** `{update.from_user.id}`\n**○ link :** <code>https://t.me/{update.from_user.username}</code>"
     )
     
     if Config.UPDATES_CHANNEL:
