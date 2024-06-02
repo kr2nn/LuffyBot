@@ -31,7 +31,7 @@ async def start(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return       
-    mkn = await update.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ")  
+    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbimZctsnmFpfbGwHGEKIRBKId82e4AAJuAAOtZbwUmdKVOaHouYc1BA")  
     await asyncio.sleep(2)
     await mkn.delete()
     await update.reply_photo(
