@@ -24,7 +24,7 @@ async def videosdemo(bot, update):
     await add_user_to_database(bot, update)
     await bot.send_message(
         Config.LOG_CHANNEL,
-           f"#DEMO💰 : \n\nPay Button Clicked [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n 💰 Payment @{Config.BOT_USERNAME}!!"
+           f"**#Dᴇᴍᴏ Sᴇɴᴅᴇʀ:** \n\n__**○ New User :**__ [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n __**○ Started :**__ @{Config.BOT_USERNAME}!!\n__**○ ID :**__ `{update.from_user.id}`\n__**○ link :**__ <code>https://t.me/{update.from_user.username}</code>"
     )
     
     if Config.UPDATES_CHANNEL:
