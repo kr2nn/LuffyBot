@@ -4,6 +4,7 @@ import psutil
 import shutil
 import string
 import asyncio
+import aiohttp
 from pyrogram import Client, filters
 from asyncio import TimeoutError
 from pyrogram.errors import MessageNotModified
