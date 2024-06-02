@@ -27,10 +27,11 @@ async def button(bot, update):
         )
     elif update.data == "payment":
       await update.message.delete()
-      await update.reply_photo(
-        photo=Translation.PAYMENT_QR,
-        caption=Translation.QR_TEXT,
-        reply_markup=Translation.BUTTONS
+      await bot.send_photo(
+            chat_id=update.message.chat.id,  # or use update.message.chat.id if you want to reply to the same chat
+            photo=Translation.PAYMENT_QR,
+            caption=Translation.QR_TEXT,
+            reply_markup=Translation.BUTTONS
       #  disable_web_page_preview=True
         ) 
     elif "close" in update.data:
