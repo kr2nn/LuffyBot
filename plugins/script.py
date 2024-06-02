@@ -63,6 +63,10 @@ Thank You For Using Me❣️</i>"""
 Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
     """
 
+    ADS_TEXT = """
+    [Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)
+    """
+
     PROGRESS = """
 🏎️ Sᴘᴇᴇᴅ : {3}/s\n\n
 ✅ Dᴏɴᴇ : {1}\n\n
