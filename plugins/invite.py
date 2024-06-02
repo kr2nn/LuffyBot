@@ -1,3 +1,4 @@
+import asyncio
 from pyrogram import Client, filters
 from plugins.config import Config
 from plugins.script import Translation
