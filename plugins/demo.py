@@ -33,9 +33,33 @@ async def videosdemo(bot, update):
         return
     await update.reply_video(
         video="https://telegra.ph/file/ad54fa01434e211d79125.mp4",
-        caption="[Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)"
+        caption=Translation.ADS_TEXT
     )
     await update.reply_video(
         video="https://telegra.ph/file/915721b8d204fab00c270.mp4",
-        caption="[Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)"
+        caption=Translation.ADS_TEXT
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/fb4eebce9e4a5f50f7e25.mp4",
+        caption=Translation.ADS_TEXT
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/e0526d0e6ae8c0a1473de.mp4",
+        caption=Translation.ADS_TEXT
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/ce899ad82ae6012db8923.mp4",
+        caption=Translation.ADS_TEXT
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/69b0e51312b1a298ec0dc.mp4",
+        caption=Translation.ADS_TEXT
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/1d80b5d35c795e8485b9d.mp4",
+        caption=Translation.ADS_TEXT
+    )
+    await update.reply_video(
+        video="https://telegra.ph/file/1b80f5ba4a2040cb76cd7.mp4",
+        caption=Translation.ADS_TEXT
     )
