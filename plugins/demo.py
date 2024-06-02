@@ -30,7 +30,7 @@ async def videosdemo(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
-    await update.reply_video(
+    await update.send_video(
         video="https://telegra.ph/file/ad54fa01434e211d79125.mp4, https://telegra.ph/file/915721b8d204fab00c270.mp4, https://telegra.ph/file/fb4eebce9e4a5f50f7e25.mp4"
       # caption=Translation.QR_TEXT.format(update.from_user.mention),
        # disable_web_page_preview=True,
