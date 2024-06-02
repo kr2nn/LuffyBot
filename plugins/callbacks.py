@@ -26,9 +26,16 @@ async def button(bot, update):
             disable_web_page_preview=True
         )
     elif update.data == "payment":
-        await update.answer(
-           photo=Translation.PAYMENT_QR,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
-           caption=Translation.QR_TEXT    # Caption for the photo
+        await update.message.delete()
+    # Edit the message to replace the current media with the new photo
+    await bot.edit_message_media(
+        chat_id=update.message.chat.id,
+        message_id=update.message.message_id,
+        media=types.InputMediaPhoto(
+            media=Translation.PAYMENT_QR,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
+            caption=Translation.QR_TEXT    # Caption for the photo
+        ),
+        reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
     )
     elif "close" in update.data:
         await update.message.delete(True)
