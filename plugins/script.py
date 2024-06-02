@@ -113,7 +113,7 @@ Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
     )
     INVITE_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton("↗️ Sʜᴀʀᴇ Yᴏᴜʀ Lɪɴᴋ", url=f"https://t.me/share/url?url=https://t.me/Lufffybro_bot?start={message.from_user.id}")           
+        InlineKeyboardButton('↗️ Sʜᴀʀᴇ Yᴏᴜʀ Lɪɴᴋ', url='https://t.me/share/url?url=https://t.me/Lufffybro_bot?start={message.from_user.id}')           
         ]]
     )
     
