@@ -23,6 +23,6 @@ if __name__ == "__main__" :
         plugins=plugins)
 
    # Start the bot
-print("I AM ALIVE @LuffyBot ")
+print("I AM ALIVE @LuffyBot")
 app.run()
 
