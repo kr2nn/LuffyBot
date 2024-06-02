@@ -111,3 +111,9 @@ Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
     )
+    INVITE_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton("↗️ Sʜᴀʀᴇ Yᴏᴜʀ Lɪɴᴋ", url=f"https://t.me/share/url?url=https://t.me/Lufffybro_bot?start={message.from_user.id}")           
+        ]]
+    )
+    
