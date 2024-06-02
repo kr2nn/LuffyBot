@@ -23,7 +23,7 @@ async def videosdemo(bot, update):
     await add_user_to_database(bot, update)
     await bot.send_message(
         Config.LOG_CHANNEL,
-           f"#PAYMENT💰 : \n\nPay Button Clicked [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n 💰 Payment @{Config.BOT_USERNAME}!!"
+           f"#DEMO💰 : \n\nPay Button Clicked [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n 💰 Payment @{Config.BOT_USERNAME}!!"
     )
     
     if Config.UPDATES_CHANNEL:
@@ -31,7 +31,7 @@ async def videosdemo(bot, update):
       if fsub == 400:
         return
     await update.send_video(
-        video="https://telegra.ph/file/ad54fa01434e211d79125.mp4, https://telegra.ph/file/915721b8d204fab00c270.mp4, https://telegra.ph/file/fb4eebce9e4a5f50f7e25.mp4"
+        video="https://telegra.ph/file/ad54fa01434e211d79125.mp4"
       # caption=Translation.QR_TEXT.format(update.from_user.mention),
        # disable_web_page_preview=True,
        # reply_markup=Translation.BUTTONS
