@@ -9,6 +9,9 @@ PIC = "https://telegra.ph/file/97e325476ebe8dd8676ad.jpg"
 @Client.on_message(filters.private & filters.command(["invite"]))
 async def refer(client,message):
    # await message.react(emoji="🔥")
+    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbk2ZcvmGApd_dScJ6JxHg1FwJ4gIKAALHAAMw1J0RtZ_tS_0N3O41BA")  
+    await asyncio.sleep(2)
+    await mkn.delete()
     await message.reply_photo(
       photo=Translation.PIC,
       caption=Translation.INVITE_TEXT, 
