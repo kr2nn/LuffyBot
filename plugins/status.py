@@ -1,6 +1,7 @@
 import traceback, datetime, asyncio, string, random, time, os, aiofiles, aiofiles.os
 from pyrogram import filters
 from pyrogram import Client
+from plugins.script import Translation
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
 from plugins.database.database import db
