@@ -5,7 +5,6 @@ logger = logging.getLogger(__name__)
 
 import os
 from plugins.config import Config
-from plugins.database import db
 
 from pyrogram import Client, filters
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
