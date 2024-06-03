@@ -36,7 +36,7 @@ async def button(bot, update):
        )
     elif update.data == "demopic":
       await update.message.delete()
-      await bot.edit_message_media(
+      await update.edit_message_media(
           chat_id=update.message.chat.id,
           message_id=update.message.message_id,
           media=types.InputMediaPhoto(Translation.PAYMENT_QR),
