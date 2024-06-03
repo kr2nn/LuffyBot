@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
-@Bot.on_message(filters.private & filters.media)
+@Client.on_message(filters.private & filters.media)
 async def getmedia(bot, update):
     
     medianame = DOWNLOAD_LOCATION + str(update.from_user.id)
