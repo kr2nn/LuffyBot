@@ -67,6 +67,12 @@ Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
     **[Must Watch 🔥](https://t.me/+yxNSj8_0_7dlMTVh)**
     """
 
+    STATUS_TXT = """<b>◉ ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ: <code>{}</code>
+◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{}</code>  
+◉ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ: <code>{}</code>
+◉ ᴜꜱᴇᴅ ᴅʙ ꜱɪᴢᴇ: <code>{}</code>
+◉ ꜰᴇᴇᴇ ᴅʙ ꜱɪᴢᴇ: <code>{}</code></b>"""
+
     PROGRESS = """
 🏎️ Sᴘᴇᴇᴅ : {3}/s\n\n
 ✅ Dᴏɴᴇ : {1}\n\n
