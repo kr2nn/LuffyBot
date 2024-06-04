@@ -80,9 +80,15 @@ Dɪʀᴇᴄᴛ Pᴀʏ:** t.me/Luffy0000007
 ⏳ Tɪᴍᴇ ʟᴇғᴛ : {4}\n\n
 """
 
+    DEMO_TEXT = """
+    ☝️DEMO OF രോമാഞ്ചം പ്രീമിയം 🔕
+    """
+
     PIC = "https://telegra.ph/file/13138bb072d6ae54386d4.jpg"
 
     PAYMENT_QR = "https://telegra.ph/file/4acfd5a112e10ba0bf34f.jpg"
+
+    DEMO_PIC = "https://telegra.ph/file/db021d838de84e8cf7676.jpg"
     
     START_BUTTONS = InlineKeyboardMarkup(
         [[  
