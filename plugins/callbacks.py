@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 @Client.on_callback_query()
-async def button(bot, update, CallbackQuery):
+async def button(bot, update):
     if update.data == "home":
         await update.message.edit_text(
             text=Translation.START_TEXT.format(update.from_user.mention),
@@ -35,7 +35,7 @@ async def button(bot, update, CallbackQuery):
            reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
        )
     elif update.data == "demopic":
-       await update.edit_message_media(
+       await bot.edit_message_media(
            media=types.InputMediaPhoto(Translation.PAYMENT_QR), 
            caption=Translation.QR_TEXT, 
            reply_markup=Translation.BUTTONS
