@@ -30,7 +30,8 @@ async def start(bot, update):
     if Config.UPDATES_CHANNEL:
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
-        return       
+        return 
+    await update.react(emoji="🔥")
     mkn = await update.reply_sticker("CAACAgIAAxkBAAJbimZctsnmFpfbGwHGEKIRBKId82e4AAJuAAOtZbwUmdKVOaHouYc1BA")  
     await asyncio.sleep(2)
     await mkn.delete()
