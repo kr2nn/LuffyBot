@@ -32,6 +32,7 @@ async def start(bot, update):
       if fsub == 400:
         return 
     await update.react(emoji="🔥")
+    if update.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
     mkn = await update.reply_sticker("CAACAgIAAxkBAAJbimZctsnmFpfbGwHGEKIRBKId82e4AAJuAAOtZbwUmdKVOaHouYc1BA")  
     await asyncio.sleep(2)
     await mkn.delete()
