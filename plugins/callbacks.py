@@ -35,10 +35,10 @@ async def button(bot, update):
            reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
        )
     elif update.data == "demopic":
-      await update.message.delete()
-      await update.edit_message_media(
-          InputMediaPhoto(Translation.PAYMENT_QT
-      )
-      )
+       await bot.send_photo(
+           chat_id=update.message.chat.id,
+           photo=Translation.DEMO_PIC,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
+           caption=Translation.DEMO_TEXT,  # Caption for the photo
+        )
     elif "close" in update.data:
         await update.message.delete(True)
