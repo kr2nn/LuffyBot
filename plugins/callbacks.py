@@ -34,7 +34,7 @@ async def button(bot, update):
            caption=Translation.QR_TEXT,  # Caption for the photo
            reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
        )
-    elif query.data == "demopic":
+    elif update.data == "demopic":
        await update.edit_message_media(InputMediaPhoto(Translation.PAYMENT_QR, Translation.QR_TEXT, reply_markup=Translation.BUTTONS))
     elif "close" in update.data:
         await update.message.delete(True)
