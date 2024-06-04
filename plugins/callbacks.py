@@ -4,6 +4,7 @@ from plugins.config import Config
 from plugins.script import Translation
 from pyrogram import Client, types, enums   
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Message, CallbackQuery, ForceReply
+from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from plugins.database.database import db
 import logging
 logging.basicConfig(level=logging.DEBUG,
