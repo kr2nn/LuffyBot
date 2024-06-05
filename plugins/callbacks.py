@@ -35,11 +35,9 @@ async def button(bot, update):
        )
     elif update.data == "payment":
         buttons = [[
-        InlineKeyboardButton('💰 Pᴀʏ 100', callback_data='payment')
+        InlineKeyboardButton('Sᴇɴᴛ Sᴄʀᴇᴇɴꜱʜᴏᴛ 📲', user_id='6807518752')           
         ],[
-        InlineKeyboardButton('Dᴇᴍᴏ Pɪᴄꜱ 🏞️', callback_data='demopic')
-        ],[ 
-        InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
+        InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='premium'),       
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
         await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
