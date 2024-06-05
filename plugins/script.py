@@ -3,13 +3,13 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-𝐇𝐄𝐋𝐋𝐎 {} 😍👋,
+<b>𝐇𝐄𝐋𝐋𝐎 {} 😍👋,
 𝗦𝗲𝗹𝗲𝗰𝘁 𝗧𝗵𝗲 𝗚𝗥𝗢𝗨𝗣 𝗬𝗢𝗨 𝗪𝗔𝗡𝗧🌺‼️
 
-__**നിങ്ങൾക് ഇഷ്ടമുള്ള ഗ്രുപ്പ് select ചെയ്യുക.!!!**__
+നിങ്ങൾക് ഇഷ്ടമുള്ള ഗ്രുപ്പ് select ചെയ്യുക.!!!</b>
 """
     DETAILS_TEXT = """
-**Hello {} 🫦
+<b>Hello {} 🫦
  
 » രോമാഞ്ചം പ്രീമിയം 🔕
 
@@ -24,7 +24,7 @@ __**നിങ്ങൾക് ഇഷ്ടമുള്ള ഗ്രുപ്പ�
 
 Price: 100
 
-Click Pay Button, Pay The Amount And JOIN 🫦**
+Click Pay Button, Pay The Amount And JOIN 🫦</b>
 """
     ABOUT_TEXT = """
 **Mʏ ɴᴀᴍᴇ** : [ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ ᴠ4](https://t.me/UploadLinkToFileBot)
@@ -128,4 +128,4 @@ Dɪʀᴇᴄᴛ Pᴀʏ:</b> t.me/Luffy0000007
         InlineKeyboardButton('↗️ Sʜᴀʀᴇ Yᴏᴜʀ Lɪɴᴋ', url='https://t.me/share/url?url=https://t.me/Lufffybro_bot?start={message.from_user.id}')           
         ]]
     )
-    
+
