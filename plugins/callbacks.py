@@ -31,16 +31,7 @@ async def button(bot, update):
         InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
-      await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translatio.DETAILS_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
-  #  elif update.data == "payment":
-    #   await update.message.delete()
-    # Send the photo
-      # await bot.send_photo(
-         #  chat_id=update.message.chat.id,
-        #   photo=Translation.PAYMENT_QR,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
-         #  caption=Translation.QR_TEXT,  # Caption for the photo
-        #   reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
-      # )
+        await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translatio.DETAILS_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif update.data == "demopic":
        await bot.send_photo(
               chat_id=update.message.chat.id,
@@ -56,6 +47,6 @@ async def button(bot, update):
         InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
-      await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+        await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif "close" in update.data:
         await update.message.delete(True)
