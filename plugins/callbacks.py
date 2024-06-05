@@ -31,7 +31,7 @@ async def button(bot, update):
        await bot.send_photo(
            chat_id=update.message.chat.id,
            photo=Translation.DEMO_PIC,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
-           caption=Translation.DEMO_TEXT,  # Caption for the photo
+           caption=Translation.DEMO_TEXT  # Caption for the photo
        )
     elif update.data == "payment":
         buttons = [[
