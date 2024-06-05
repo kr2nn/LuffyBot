@@ -46,9 +46,12 @@ async def button(bot, update):
       )
     elif update.data == "payment":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/MrMKN/PROFESSOR-BOT')
-            ],[
-            InlineKeyboardButton('‹ Bᴀᴄᴋ', 'about')
+        InlineKeyboardButton('💰 Pᴀʏ 100', callback_data='payment')
+        ],[
+        InlineKeyboardButton('Dᴇᴍᴏ Pɪᴄꜱ 🏞️', callback_data='demopic')
+        ],[ 
+        InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
+        InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
         await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif "close" in update.data:
