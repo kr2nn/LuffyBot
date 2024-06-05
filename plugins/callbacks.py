@@ -27,11 +27,11 @@ async def button(bot, update):
             reply_markup=Translation.PREMIUM_BUTTONS,
             disable_web_page_preview=True
         )
-      elif update.data == "demopic":
-       await bot.send_photo(
-           chat_id=update.message.chat.id,
-           photo=Translation.DEMO_PIC,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
-           caption=Translation.DEMO_TEXT  # Caption for the photo
+    elif update.data == "demopic":
+        await update.send_photo(
+            chat_id=update.message.chat.id,
+            photo=Translation.DEMO_PIC,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
+            caption=Translation.DEMO_TEXT  # Caption for the photo
        )
     elif update.data == "payment":
         buttons = [[
