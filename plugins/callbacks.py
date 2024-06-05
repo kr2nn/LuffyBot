@@ -1,7 +1,8 @@
-import os
+import os, random
 from plugins.functions.display_progress import progress_for_pyrogram, humanbytes
 from plugins.config import Config
 from plugins.script import Translation
+from plugins.info import PICS
 from pyrogram import Client, types, enums   
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Message, CallbackQuery, ForceReply
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -35,13 +36,20 @@ async def button(bot, update):
            caption=Translation.QR_TEXT,  # Caption for the photo
            reply_markup=Translation.BUTTONS  # Optional: Add reply markup if needed
        )
-    elif update.data == "demopic":
+    elif update.data == "source":
       await bot.edit_message_media(
           chat_id=update.message.chat.id,
           message_id=update.message.message_id,
           media=types.InputMediaPhoto(media=Translation.PAYMENT_QR),
           caption=Translation.QR_TEXT,
           reply_markup=Translation.BUTTONS
-      )                                       
+      )
+      elif update.data == "demopic":
+        buttons = [[
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/MrMKN/PROFESSOR-BOT')
+            ],[
+            InlineKeyboardButton('‹ Bᴀᴄᴋ', 'about')
+        ]]
+        await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif "close" in update.data:
         await update.message.delete(True)
