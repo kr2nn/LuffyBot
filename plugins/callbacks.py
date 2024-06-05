@@ -21,7 +21,7 @@ async def button(bot, update):
               ],[
               InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
               ]]
-        await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translation.START_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))  
+        await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translation.START_TEXT.format(user=update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))  
     elif update.data == "premium":
       buttons = [[
         InlineKeyboardButton('💰 Pᴀʏ 100', callback_data='payment')
@@ -31,7 +31,7 @@ async def button(bot, update):
         InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
-        await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translatio.DETAILS_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+        await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translatio.DETAILS_TEXT.format(user=update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif update.data == "demopic":
        await bot.send_photo(
               chat_id=update.message.chat.id,
