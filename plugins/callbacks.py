@@ -44,7 +44,7 @@ async def button(bot, update):
           caption=Translation.QR_TEXT,
           reply_markup=Translation.BUTTONS
       )
-      elif update.data == "demopic":
+    elif update.data == "demopic":
         buttons = [[
             InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/MrMKN/PROFESSOR-BOT')
             ],[
