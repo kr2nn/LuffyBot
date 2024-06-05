@@ -31,7 +31,7 @@ async def button(bot, update):
         InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
-       await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translatio.DETAILS_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons)
+      await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translatio.DETAILS_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons)
   #  elif update.data == "payment":
     #   await update.message.delete()
     # Send the photo
@@ -56,6 +56,6 @@ async def button(bot, update):
         InlineKeyboardButton('« Bᴀᴄᴋ', callback_data='home'),   
         InlineKeyboardButton('✘ Cʟᴏsᴇ', callback_data='close')
         ]]
-       await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
+      await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif "close" in update.data:
         await update.message.delete(True)
