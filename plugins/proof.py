@@ -42,6 +42,6 @@ async def save_photo(bot, update):
       if fsub == 400:
         return 
     await update.reply_text(
-        text=Translation.PROOF_TEXT
+        text=Translation.PROOF_UPLOAD
        # disable_web_page_preview=True,
     )
