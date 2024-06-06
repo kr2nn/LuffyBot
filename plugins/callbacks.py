@@ -57,4 +57,3 @@ async def button(bot, update):
         await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif "close" in update.data:
         await update.message.delete(True)
-      
