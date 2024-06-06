@@ -36,13 +36,8 @@ async def handle_photo(bot, update):
                   disable_web_page_preview=True,
                   quote=True
               )
-          except Exception as error:
-              print(error)
-      if update and update.from_user:
-          return await update.reply_text("I don't know about you sar :(")
-      await add_user_to_database(bot, update)
       
-      sender_name = message.from_user.first_name
+          sender_name = message.from_user.first_name
           chat_id = message.chat.id
           print(f"Received Proof from {sender_name} in chat {chat_id}")
       
