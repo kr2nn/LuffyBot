@@ -27,6 +27,16 @@ async def button(bot, update):
            photo=Translation.DEMO_PIC,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
            caption=Translation.DEMO_TEXT,  # Caption for the photo
        )
+    elif update.data.startswith("accept"):
+        user_id = int(update.data.split('_')[1])
+        await bot.send_message(chat_id=user_id, text="Your Payment Is Verified Successfully")
+        await update.message.edit_text(text="Successfully Send Accept Message To User")
+
+    elif update.data.startswith("decline"):
+        user_id = int(update.data.split('_')[1])
+        await bot.send_message(chat_id=user_id, text="Your Payment Is Declined")
+        await update.message.edit_text(text="Successfully Send Decline Message To User")
+        
     elif update.data == "premium":
         buttons = [[
         InlineKeyboardButton('💰 Pᴀʏ 100', callback_data='payment')
@@ -47,3 +57,4 @@ async def button(bot, update):
         await update.edit_message_media(InputMediaPhoto(random.choice(QR_PIC), Translation.QR_TEXT, enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif "close" in update.data:
         await update.message.delete(True)
+      
