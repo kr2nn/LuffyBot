@@ -2,7 +2,7 @@ import os, random
 from plugins.functions.display_progress import progress_for_pyrogram, humanbytes
 from plugins.config import Config
 from plugins.script import Translation
-from plugins.info import PICS, QR_PIC
+from plugins.info import PICS, QR_PIC, PIC
 from pyrogram import Client, types, enums   
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Message, CallbackQuery, ForceReply
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
