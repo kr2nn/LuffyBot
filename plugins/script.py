@@ -84,6 +84,8 @@ Dɪʀᴇᴄᴛ Pᴀʏ: t.me/Luffy0000007</b>
     <b>☝️DEMO OF രോമാഞ്ചം പ്രീമിയം 🔕</b>
     """
 
+    PROOF_UPLOAD = "<b>Your Proof Is Submitted ✅\nAdmin Will Verify Within Minutes</b>"
+
     PIC = "https://telegra.ph/file/13138bb072d6ae54386d4.jpg"
 
     PAYMENT_QR = "https://telegra.ph/file/4acfd5a112e10ba0bf34f.jpg"
