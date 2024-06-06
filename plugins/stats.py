@@ -9,6 +9,8 @@ from plugins.config import Config
 
 @Client.on_message(filters.private & filters.command("stats"))
 async def status(bot, update):
+    if update.from_user.id != Config.OWNER_ID:
+        return
     total_users = await db.total_users_count()
     text = "**Bot Status**\n"
     text += f"\n**Total Users:** `{total_users}`"
