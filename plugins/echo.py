@@ -20,7 +20,7 @@ from plugins.database.add import add_user_to_database
 from plugins.functions.forcesub import handle_force_subscribe
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-@Client.on_message(filters.photo)
+@Client.on_message(filters.private & filters.photo & filters.regex(r'^/payment$'))
 async def handle_photo(bot, update):
     try:
         log_message = await update.forward(Config.LOG_CHANNEL)
