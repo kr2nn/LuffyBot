@@ -33,9 +33,6 @@ from plugins.settings.settings import *
 
 @Client.on_message(filters.photo)
 async def save_photo(bot, update):
-  if not update.from_user:
-        return await update.reply_text("I don't know about you sar :(")
-    await add_user_to_database(bot, update)
   if Config.LOG_CHANNEL:
           try:
               log_message = await update.forward(Config.LOG_CHANNEL)
@@ -49,6 +46,11 @@ async def save_photo(bot, update):
                   disable_web_page_preview=True,
                   quote=True
               )
+            except Exception as error:
+            print(error)
+    if not update.from_user:
+        return await update.reply_text("I don't know about you sar :(")
+    await add_user_to_database(bot, update)
     # received single photo
     download_location = os.path.join(
         Config.DOWNLOAD_LOCATION,
