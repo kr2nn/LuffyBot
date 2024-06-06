@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from plugins.config import Config
 from plugins.script import Translation
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -8,7 +8,7 @@ async def check_photo(c, m):
     message = m
     ff = m.from_user
     md = m.reply_to_message
-    await m.reply_text("**Your Proof Is Submitted Admin Will Verify With In Minutes**")
+    await m.reply_text("**Your Proof Is Submitted ✅\nAdmin Will Verify With In Minutes**")
     button = [[
         InlineKeyboardButton("Accept", callback_data=f"accept_{m.from_user.id}"),
         InlineKeyboardButton("Decline", callback_data=f"decline_{m.from_user.id}")
