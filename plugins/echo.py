@@ -20,32 +20,31 @@ from plugins.database.add import add_user_to_database
 from plugins.functions.forcesub import handle_force_subscribe
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-
-@app.on_message(filters.photo)
+@Client.on_message(filters.photo)
 async def handle_photo(bot, update):
-  try:
-    log_message = await update.forward(Config.LOG_CHANNEL)
-    log_info = "Proof Sender Information\n"
-    log_info += "\nFirst Name: " + update.from_user.first_name
-    log_info += "\nUser ID: " + str(update.from_user.id)
-    log_info += "\nUsername: @" + update.from_user.username if update.from_user.username else ""
-    log_info += "\nUser Link: " + update.from_user.mention
-    await log_message.reply_text(
-        text=log_info,
-        disable_web_page_preview=True,
-        quote=True
-    )
- try:  # This is likely the problematic line
-    sender_name = update.from_user.first_name
-    chat_id = update.chat.id
-    print(f"Received Proof from {sender_name} in chat {chat_id}")
-except Exception as e:
-    print(f"An error occurred while getting user information: {e}")
+    try:
+        log_message = await update.forward(Config.LOG_CHANNEL)
+        log_info = "Proof Sender Information\n"
+        log_info += "\nFirst Name: " + update.from_user.first_name
+        log_info += "\nUser ID: " + str(update.from_user.id)
+        log_info += "\nUsername: @" + update.from_user.username if update.from_user.username else ""
+        log_info += "\nUser Link: " + update.from_user.mention
+        await log_message.reply_text(
+            text=log_info,
+            disable_web_page_preview=True,
+            quote=True
+        )
+        
+        sender_name = update.from_user.first_name
+        chat_id = update.chat.id
+        print(f"Received Proof from {sender_name} in chat {chat_id}")
+    except Exception as e:
+        print(f"An error occurred while getting user information: {e}")
   
-      chk = await bot.send_message(
-                  chat_id=update.chat.id,
-                  text=f'**Your Proof Is Submitted ✅\nAdmin Will Verify Within Minutes**',
-                  disable_web_page_preview=True,
-                  reply_to_message_id=update.id,
-                  parse_mode=enums.ParseMode.HTML
-      )
+    chk = await bot.send_message(
+        chat_id=update.chat.id,
+        text=f'**Your Proof Is Submitted ✅\nAdmin Will Verify Within Minutes**',
+        disable_web_page_preview=True,
+        reply_to_message_id=update.id,
+        parse_mode=enums.ParseMode.HTML
+    )
