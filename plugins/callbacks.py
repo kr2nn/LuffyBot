@@ -34,8 +34,8 @@ async def button(bot, update):
 
     elif update.data.startswith("decline"):
         user_id = int(update.data.split('_')[1])
-        await bot.send_message(chat_id=user_id, text="Your Payment Is Declined")
-        await update.message.edit_text(text="Successfully Send Decline Message To User")
+        await bot.send_message(chat_id=user_id, text=Translation.PAYMENT_DECLINED)
+        await update.message.edit_text(text=Translation.DECLINED_SUCCESSFULLY)
         
     elif update.data == "premium":
         buttons = [[
