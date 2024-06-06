@@ -36,11 +36,13 @@ async def handle_photo(bot, update):
                   disable_web_page_preview=True,
                   quote=True
               )
-      
-          sender_name = message.from_user.first_name
-          chat_id = message.chat.id
-          print(f"Received Proof from {sender_name} in chat {chat_id}")
-      
+          try:
+              sender_name = update.from_user.first_name
+              chat_id = update.chat.id
+              print(f"Received Proof from {sender_name} in chat {chat_id}")
+              except Exception as e:
+              print(f"An error occurred while getting user information: {e}")
+
       chk = await bot.send_message(
                   chat_id=update.chat.id,
                   text=f'**Your Proof Is Submitted ✅\nAdmin Will Verify Within Minutes**',
