@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from plugins.config import Config
+from plugins.script import Translation
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.private & filters.photo)
