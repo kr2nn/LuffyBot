@@ -108,6 +108,14 @@ Admin Is Accepted Your Payment Here Is Your Link:
     Successfully Send Accept Message To User
     """
 
+    PAYMENT_DECLINED = """
+    Your Payment Is Declined
+    """
+
+    DECLINED_SUCCESSFULLY = """
+    Successfully Send Decline Message To User
+    """
+
     PIC = "https://telegra.ph/file/13138bb072d6ae54386d4.jpg"
 
     PAYMENT_QR = "https://telegra.ph/file/4acfd5a112e10ba0bf34f.jpg"
