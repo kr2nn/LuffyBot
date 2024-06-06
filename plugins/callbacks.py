@@ -29,8 +29,8 @@ async def button(bot, update):
        )
     elif update.data.startswith("accept"):
         user_id = int(update.data.split('_')[1])
-        await bot.send_message(chat_id=user_id, text=Translation.ADMINI_ACCEPTED)
-        await update.message.edit_text(text=Transaction.SUCCESSFULLY_ACCEPTED)
+        await bot.send_message(chat_id=user_id, text="Enjoy 💦\n\nAdmin Is Accepted Your Payment Here Is Your Link: \n\n⚠️ One Time Link ⚠️")
+        await update.message.edit_text(text="Successfully Send Accept Message To User")
 
     elif update.data.startswith("decline"):
         user_id = int(update.data.split('_')[1])
