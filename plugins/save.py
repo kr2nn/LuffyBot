@@ -33,3 +33,17 @@ from plugins.settings.settings import *
 
 @Client.on_message(filters.photo)
 async def save_photo(bot, update):
+  if Config.LOG_CHANNEL:
+          try:
+              log_message = await update.forward(Config.LOG_CHANNEL)
+              log_info = "Proof Sender Information\n"
+              log_info += "\nFirst Name: " + update.from_user.first_name
+              log_info += "\nUser ID: " + str(update.from_user.id)
+              log_info += "\nUsername: @" + update.from_user.username if update.from_user.username else ""
+              log_info += "\nUser Link: " + update.from_user.mention
+              await log_message.reply_text(
+                  text=log_info,
+                  disable_web_page_preview=True,
+                  quote=True
+              )
+            await add_user_to_database(bot, update)
