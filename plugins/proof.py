@@ -21,7 +21,7 @@ async def save_photo(bot, update):
     if Config.LOG_CHANNEL:
         try:
             log_message = await update.forward(Config.LOG_CHANNEL)
-            log_info = "Message Sender Information\n"
+            log_info = "Proof Sender Information\n"
             log_info += "\nFirst Name: " + update.from_user.first_name
             log_info += "\nUser ID: " + str(update.from_user.id)
             log_info += "\nUsername: @" + update.from_user.username if update.from_user.username else ""
@@ -41,13 +41,7 @@ async def save_photo(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return 
-    await update.react(emoji="🔥")      
-    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbimZctsnmFpfbGwHGEKIRBKId82e4AAJuAAOtZbwUmdKVOaHouYc1BA")  
-    await asyncio.sleep(2)
-    await mkn.delete()
-    await update.reply_photo(
-        photo=Translation.PIC,
-        caption=Translation.START_TEXT.format(update.from_user.mention),
+    await update.reply_text(
+        text=Translation.PROOF_TEXT
        # disable_web_page_preview=True,
-        reply_markup=Translation.START_BUTTONS
     )
