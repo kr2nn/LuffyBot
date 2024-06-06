@@ -12,22 +12,44 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# ▓ ▒ ▒ ▒
 
 @Client.on_callback_query()
 async def button(bot, update):
     if update.data == "home":
+
+        reply1 = await update.message.reply_text("▓▒▒▒")
+        reply2 = await reply1.edit("▓▓▒▒")
+        reply3 = await reply2.edit("▓▓▓▒")
+        reply4 = await reply3.edit("▓▓▓▓")
+        await reply4.delete()
+      
         await update.message.edit_text(
             text=Translation.START_TEXT.format(update.from_user.mention),
             reply_markup=Translation.START_BUTTONS,
             disable_web_page_preview=True
         )
     elif update.data == "demopic":
+      
+       reply1 = await update.message.reply_text("▓▒▒▒")
+       reply2 = await reply1.edit("▓▓▒▒")
+       reply3 = await reply2.edit("▓▓▓▒")
+       reply4 = await reply3.edit("▓▓▓▓")
+       await reply4.delete()
+      
        await bot.send_photo(
            chat_id=update.message.chat.id,
            photo=Translation.DEMO_PIC,  # Assuming PAYMENT_QR contains the file ID or file path of the photo
            caption=Translation.DEMO_TEXT,  # Caption for the photo
        )
     elif update.data == "premium":
+
+        reply1 = await update.message.reply_text("▓▒▒▒")
+        reply2 = await reply1.edit("▓▓▒▒")
+        reply3 = await reply2.edit("▓▓▓▒")
+        reply4 = await reply3.edit("▓▓▓▓")
+        await reply4.delete()
+      
         buttons = [[
         InlineKeyboardButton('💰 Pᴀʏ 100', callback_data='payment')
         ],[
@@ -38,6 +60,13 @@ async def button(bot, update):
         ]]
         await update.edit_message_media(InputMediaPhoto(random.choice(PICS), Translation.DETAILS_TEXT.format(update.from_user.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     elif update.data == "payment":
+      
+        reply1 = await update.message.reply_text("▓▒▒▒")
+        reply2 = await reply1.edit("▓▓▒▒")
+        reply3 = await reply2.edit("▓▓▓▒")
+        reply4 = await reply3.edit("▓▓▓▓")
+        await reply4.delete()
+      
         buttons = [[
         InlineKeyboardButton('Sᴇɴᴛ Sᴄʀᴇᴇɴꜱʜᴏᴛ 📲', user_id='6807518752')           
         ],[
