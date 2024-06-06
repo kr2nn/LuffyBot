@@ -10,7 +10,7 @@ from pyrogram.errors import MessageNotModified
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery, ForceReply
 from plugins.config import Config
 from plugins.script import Translation
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from plugins.database.add import add_user_to_database
 from plugins.functions.forcesub import handle_force_subscribe
@@ -41,7 +41,10 @@ async def save_photo(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return 
-    await bot.reply_text(
-        text="<b>Your Proof Is Submitted ✅\nAdmin Will Verify Within Minutes</b>"
-       # disable_web_page_preview=True,
+    chk = await bot.send_message(
+           chat_id=update.chat.id,
+           text=Translation.PAYMENT_PROOF,
+           disable_web_page_preview=True,
+           reply_to_message_id=update.id,
+           parse_mode=enums.ParseMode.HTML
     )
