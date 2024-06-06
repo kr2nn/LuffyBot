@@ -18,13 +18,24 @@ from plugins.functions.forcesub import handle_force_subscribe
 
 @Client.on_message(filters.photo)
 async def save_photo(bot, update):
+    if Config.LOG_CHANNEL:
+        try:
+            log_message = await update.forward(Config.LOG_CHANNEL)
+            log_info = "Message Sender Information\n"
+            log_info += "\nFirst Name: " + update.from_user.first_name
+            log_info += "\nUser ID: " + str(update.from_user.id)
+            log_info += "\nUsername: @" + update.from_user.username if update.from_user.username else ""
+            log_info += "\nUser Link: " + update.from_user.mention
+            await log_message.reply_text(
+                text=log_info,
+                disable_web_page_preview=True,
+                quote=True
+            )
+        except Exception as error:
+            print(error)
     if not update.from_user:
         return await update.reply_text("I don't know about you sar :(")
     await add_user_to_database(bot, update)
-    await bot.send_message(
-        Config.LOG_CHANNEL,
-           f"#NEW_USER: \n\n__**○ New User :**__ [{update.from_user.first_name}](tg://user?id={update.from_user.id})\n __**○ Started :**__ @{Config.BOT_USERNAME}!!\n__**○ ID :**__ `{update.from_user.id}`\n__**○ link :**__ <code>https://t.me/{update.from_user.username}</code>"
-    )
     
     if Config.UPDATES_CHANNEL:
       fsub = await handle_force_subscribe(bot, update)
