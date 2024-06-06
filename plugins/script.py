@@ -51,6 +51,7 @@ Click Pay Button, Pay The Amount And JOIN 🫦</b>
 Thank You For Using Me❣️</i>"""
 
     PAYMENT_INFO = """
+○ ID : <code>{id}</code>    
 ○ First Name : <code>{n}<code>
 ○ UserName : @{u}
 ○ link : <code>https://t.me/{u}</code>
