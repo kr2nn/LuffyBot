@@ -41,7 +41,7 @@ async def save_photo(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return 
-    await update.reply_text(
-        text=Translation.PROOF_UPLOAD
+    await bot.reply_text(
+        text="<b>Your Proof Is Submitted ✅\nAdmin Will Verify Within Minutes</b>"
        # disable_web_page_preview=True,
     )
