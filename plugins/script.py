@@ -99,7 +99,8 @@ Dɪʀᴇᴄᴛ Pᴀʏ: t.me/Luffy0000007</b>
     ADMINI_ACCEPTED = """
     Enjoy 💦
 
-Admin Is Accepted Your Payment Here Is Your Link: 
+Admin Is Accepted Your Payment Here Is Your Link:
+https://t.me/+kG00EsMy_Ns0NTdl
 
 ⚠️ One Time Link ⚠️
     """
