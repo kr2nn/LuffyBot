@@ -43,7 +43,7 @@ async def save_photo(bot, update):
         return 
     chk = await bot.send_message(
            chat_id=update.chat.id,
-           text=Translation.PAYMENT_PROOF,
+           text=Translation.PROOF_UPLOAD,
            disable_web_page_preview=True,
            reply_to_message_id=update.id,
            parse_mode=enums.ParseMode.HTML
