@@ -49,3 +49,18 @@ async def save_photo(bot, update):
             if not update.from_user:
         return await update.reply_text("I don't know about you sar :(")
     await add_user_to_database(bot, update)
+    # received single photo
+    download_location = os.path.join(
+        Config.DOWNLOAD_LOCATION,
+        str(update.from_user.id) + ".jpg"
+    )
+    await bot.download_media(
+        message=update,
+        file_name=download_location
+    )
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Translation.SAVED_CUSTOM_THUMB_NAIL,
+        reply_to_message_id=update.id
+    )
+    await db.set_thumbnail(update.from_user.id, thumbnail=update.photo.file_id)
