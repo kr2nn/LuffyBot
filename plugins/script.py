@@ -88,12 +88,17 @@ Dɪʀᴇᴄᴛ Pᴀʏ: t.me/Luffy0000007</b>
     <b>Your Proof Is Submitted ✅
     Admin Will Verify Within Minutes</b>
     """
+    
     ADMINI_ACCEPTED = """
     Enjoy 💦
 
 Admin Is Accepted Your Payment Here Is Your Link: 
 
 ⚠️ One Time Link ⚠️
+    """
+    
+    SUCCESSFULLY_ACCEPTED = """
+    Successfully Send Accept Message To User
     """
 
     PIC = "https://telegra.ph/file/13138bb072d6ae54386d4.jpg"
