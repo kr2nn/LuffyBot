@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def check_photo(c, m):
     if Config.LOG_CHANNEL:
         try:
-            log_message = await update.forward(Config.LOG_CHANNEL)
+            log_message = await m.forward(Config.LOG_CHANNEL)
             log_info = "Message Sender Information\n"
             log_info += "\nFirst Name: " + update.from_user.first_name
             log_info += "\nUser ID: " + str(update.from_user.id)
