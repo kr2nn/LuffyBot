@@ -110,7 +110,7 @@ https://t.me/+kG00EsMy_Ns0NTdl
     """
 
     PAYMENT_DECLINED = """
-    Your Transaction Is Declined! Your Payment Is Not Received. Contact Admin
+    <b>Your Transaction Is Declined! Your Payment Is Not Received. Contact Admin</b>
     """
 
     DECLINED_SUCCESSFULLY = """
