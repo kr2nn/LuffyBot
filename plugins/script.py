@@ -161,4 +161,9 @@ https://t.me/+kG00EsMy_Ns0NTdl
         InlineKeyboardButton('↗️ Sʜᴀʀᴇ Yᴏᴜʀ Lɪɴᴋ', url='https://t.me/share/url?url=https://t.me/Lufffybro_bot?start={message.from_user.id}')           
         ]]
     )
+    ADMIN_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('👤 Cᴏɴᴛᴀᴄᴛ Aᴅᴍɪɴ', user_id='6807518752')           
+        ]]
+    )
 
