@@ -32,8 +32,8 @@ async def start(bot, update):
         return       
     # Define the list of photo file IDs to be sent
     photo_file_ids = [
-        "https://telegra.ph/file/f7f8409bef77fcba2b3c1.jpg",  # Replace with actual file IDs
-        "https://telegra.ph/file/5097e8973b5c83d51794f.jpg"
+        "AgACAgEAAxkBAANbZmW_RtuKIQvo6KxES1Bzb50eUOYAAjysMRt4DzBHjw7oEeR9Q2kACAEAAwIAA3gABx4E",  # Replace with actual file IDs
+        "AgACAgEAAxkBAANdZmW_RnzzWJDlVG_hfU2l6UXtX9oAAoytMRvKtRBHTHOBmwABXgt5AAgBAAMCAAN4AAceBA"
         # Add more file IDs as needed
     ]
 
