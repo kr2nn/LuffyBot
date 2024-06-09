@@ -41,6 +41,5 @@ async def start(bot, update):
     await bot.send_media_group(
         chat_id=update.chat.id,
         media=photo_file_ids,
-        caption=Translation.START_TEXT,
         reply_markup=Translation.START_BUTTONS
     )
