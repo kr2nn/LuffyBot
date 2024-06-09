@@ -30,14 +30,17 @@ async def start(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return       
-    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbimZctsnmFpfbGwHGEKIRBKId82e4AAJuAAOtZbwUmdKVOaHouYc1BA")  
-    await asyncio.sleep(2)
-    await mkn.delete()
-    await update.reply_photo(
-        photo=Translation.PIC,
-        caption=Translation.START_TEXT.format(update.from_user.mention),
-       # disable_web_page_preview=True,
+    # Define the list of photo file IDs to be sent
+    photo_file_ids = [
+        "https://telegra.ph/file/f7f8409bef77fcba2b3c1.jpg",  # Replace with actual file IDs
+        "https://telegra.ph/file/5097e8973b5c83d51794f.jpg"
+        # Add more file IDs as needed
+    ]
+
+    # Send the media group (multiple photos) to the user
+    await bot.send_media_group(
+        chat_id=update.chat.id,
+        media=photo_file_ids,
+        caption=Translation.START_TEXT,
         reply_markup=Translation.START_BUTTONS
     )
-
-
