@@ -15,6 +15,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from plugins.database.add import add_user_to_database
 from plugins.functions.forcesub import handle_force_subscribe
 
+PIC = "https://telegra.ph/file/72b1efaa44944d2b9e1b9.jpg"
 
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
@@ -30,16 +31,12 @@ async def start(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return       
-    # Define the list of photo file IDs to be sent
-    photo_file_ids = [
-        "AgACAgEAAxkBAANbZmW_RtuKIQvo6KxES1Bzb50eUOYAAjysMRt4DzBHjw7oEeR9Q2kACAEAAwIAA3gABx4E",  # Replace with actual file IDs
-        "AgACAgEAAxkBAANdZmW_RnzzWJDlVG_hfU2l6UXtX9oAAoytMRvKtRBHTHOBmwABXgt5AAgBAAMCAAN4AAceBA"
-        # Add more file IDs as needed
-    ]
-
-    # Send the media group (multiple photos) to the user
-    await bot.send_media_group(
-        chat_id=update.chat.id,
-        media=photo_file_ids,
+    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbimZctsnmFpfbGwHGEKIRBKId82e4AAJuAAOtZbwUmdKVOaHouYc1BA")  
+    await asyncio.sleep(2)
+    await mkn.delete()
+    await update.reply_photo(
+        photo=Translation.PIC,
+        caption=Translation.START_TEXT.format(update.from_user.mention),
+       # disable_web_page_preview=True,
         reply_markup=Translation.START_BUTTONS
     )
