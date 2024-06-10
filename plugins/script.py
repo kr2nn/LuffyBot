@@ -109,6 +109,12 @@ https://t.me/+kG00EsMy_Ns0NTdl
     Successfully Send Accept Message To User
     """
 
+    PAYMENT_USER = """
+    Successfully Send Accept Message To User
+    Payment User : {}
+    User Id : {}
+    """
+
     PAYMENT_DECLINED = """
     <b>Your Transaction Is Declined! Your Payment Is Not Received. Contact Admin</b>
     """
