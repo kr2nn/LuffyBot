@@ -11,5 +11,5 @@ async def check_photo(c, m):
         InlineKeyboardButton("Accept", callback_data=f"accept_{m.from_user.id}"),
         InlineKeyboardButton("Decline", callback_data=f"decline_{m.from_user.id}")
     ]]
-    await c.send_photo(chat_id=Config.LOG_CHANNEL, photo=m.photo.file_id, caption=Translation.PAYMENT_INFO.format(id=ff.id, n=ff.first_name, u=ff.username), reply_markup=InlineKeyboardMarkup(button), parse_mode=enums.ParseMode.HTML)
+    await c.send_photo(chat_id=Config.PAYMENT_LOG, photo=m.photo.file_id, caption=Translation.PAYMENT_INFO.format(id=ff.id, n=ff.first_name, u=ff.username), reply_markup=InlineKeyboardMarkup(button), parse_mode=enums.ParseMode.HTML)
     await c.send_message(chat_id=Config.PAYMENT_LOG, text=Translation.PAYMENT_USER.format(id=ff.id, n=ff.first_name, u=ff.username))
