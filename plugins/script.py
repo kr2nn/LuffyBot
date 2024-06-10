@@ -110,9 +110,11 @@ https://t.me/+kG00EsMy_Ns0NTdl
     """
 
     PAYMENT_USER = """
-    Successfully Send Accept Message To User
-    Payment User : {}
-    User Id : {}
+Successfully Send Accept Message To User
+○ ID : <code>{id}</code>    
+○ First Name : <code>{n}<code>
+○ UserName : @{u}
+○ link : <code>https://t.me/{u}</code>
     """
 
     PAYMENT_DECLINED = """
