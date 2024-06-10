@@ -110,7 +110,7 @@ https://t.me/+kG00EsMy_Ns0NTdl
     """
 
     PAYMENT_USER = """
-Successfully Send Accept Message To User
+**🫶 Nᴇᴡ Pʀᴇᴍɪᴜᴍ Mᴇᴍʙᴇʀ**
 ○ ID : <code>{id}</code>    
 ○ First Name : <code>{n}<code>
 ○ UserName : @{u}
