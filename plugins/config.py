@@ -27,6 +27,8 @@ class Config(object):
     
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002142928842"))
     
+    PAYMENT_LOG = int(os.environ.get("PAYMENT_LOG", "-1002224622658"))
+    
     LOGGER = logging
 
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002072970024")
