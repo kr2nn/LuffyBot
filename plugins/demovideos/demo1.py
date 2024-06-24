@@ -31,9 +31,14 @@ async def demovideos_1(bot, update):
       fsub = await handle_force_subscribe(bot, update)
       if fsub == 400:
         return
-    mkn = await update.reply_sticker("CAACAgIAAxkBAAJbh2ZctsRwEUN7dqpJGbb2wFfsEuKGAAJ8AAOtZbwUeF2RGKVKMMU1BA")  
-    await asyncio.sleep(4)
-    await mkn.delete()
+    reply1 = await message.reply_text("● ◌ ◌ ◌")
+    await asyncio.sleep(0.5)
+    reply2 = await reply1.edit("● ● ◌ ◌")
+    await asyncio.sleep(0.5)
+    reply3 = await reply2.edit("● ● ● ◌")
+    await asyncio.sleep(0.5)
+    reply4 = await reply3.edit("● ● ● ●")
+    await reply4.delete()
     await update.reply_video(
         video="https://telegra.ph/file/ad54fa01434e211d79125.mp4",
         caption=Translation.ADS_TEXT
