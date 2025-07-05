@@ -11,29 +11,29 @@ logging.basicConfig(
 
 class Config(object):
     
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7477234408:AAGI7iXDHrBU9VGGUnAl0IEKSBrQ_IrdupY")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
     
-    API_ID = int(os.environ.get("API_ID", "29478734"))
+    API_ID = int(os.environ.get("API_ID", ""))
     
-    API_HASH = os.environ.get("API_HASH", "8bd53e36eceada3329fbe46d9b961d1f")
+    API_HASH = os.environ.get("API_HASH", "")
 
     DOWNLOAD_LOCATION = "./DOWNLOADS"
 
     HTTP_PROXY = os.environ.get("HTTP_PROXY", "")
 
-    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://nikzgod:nikzgod@cluster0.lqn4wau.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "")
     
-    SESSION_NAME = os.environ.get("SESSION_NAME", "LuffySale_Bot")
+    SESSION_NAME = os.environ.get("SESSION_NAME", "")
     
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002142928842"))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
     
-    PAYMENT_LOG = int(os.environ.get("PAYMENT_LOG", "-1002224622658"))
+    PAYMENT_LOG = int(os.environ.get("PAYMENT_LOG", ""))
     
     LOGGER = logging
 
-    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002072970024")
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
 
-    OWNER_ID = int(os.environ.get("OWNER_ID", "6807518752"))
+    OWNER_ID = int(os.environ.get("OWNER_ID", ""))
     
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "LuffySale_Bot")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
                                   
